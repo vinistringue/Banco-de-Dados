@@ -1,0 +1,32 @@
+TABELA < venda >
+
+id: < int not null auto increment PK >
+data: < datetime >
+status: < varchar(45) >
+valor_total: < decimal(9,2) >
+cliente_id: < int not null FK >
+funcionario_id: < int not null FK >
+
+
+
+TABELA < pagamento_venda >
+
+id_pagamento_venda: < int not null auto increment >
+tipo_pagamento: < char(1) >
+data_pagamento: < datetime >
+numero_cartao_pagamento: < varchar(16) >
+numero_parcelas_pagamento: < int >
+venda_id: < int not null FK >
+
+
+
+
+TABELA < item_venda >
+
+id_item_venda: < int not null >
+quantidade: < int not null >
+valor_unitario: < decimal(9,2) >
+subtotal: < decimal(9,2)
+venda_id: < int not null FK >
+produto_id: < int not null FK >
+
